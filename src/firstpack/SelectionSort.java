@@ -16,6 +16,9 @@ public class SelectionSort {
         for (int i = 0; i < noSize; i++) {
             numbers[i] = input.nextInt();
         }
+        SelectionSort obj = new SelectionSort();
+        obj.SelSort(numbers);
+        obj.print(numbers);
 
 
     }
@@ -32,8 +35,8 @@ public class SelectionSort {
                     MinIndex = j;
                 }
                 temp = arr[i];
-                arr [i] = arr [MinIndex];
-                arr [MinIndex] = temp ;
+                arr[i] = arr[MinIndex];
+                arr[MinIndex] = temp;
 
             }
         }
