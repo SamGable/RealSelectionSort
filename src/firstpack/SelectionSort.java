@@ -18,21 +18,33 @@ public class SelectionSort {
         }
 
 
-
-
     }
 
 
-    void SelSort (int arr[]) {
+    void SelSort(int arr[]) {
+        int MinIndex, temp;
+        for (int i = 0; i < arr.length; i++) {
+            MinIndex = i;
 
+
+            for (int j = 1; j < arr.length; j++) {
+                if (arr[MinIndex] > arr[j]) {
+                    MinIndex = j;
+                }
+                temp = arr[i];
+                arr [i] = arr [MinIndex];
+                arr [MinIndex] = temp ;
+
+            }
+        }
 
     }
 
-void print (int nums[]) {
-        for (int i = 0 ; i < nums.length ; i++) {
+    void print(int nums[]) {
+        for (int i = 0; i < nums.length; i++) {
             System.out.println(nums[i]);
         }
-}
+    }
 
 
 }
